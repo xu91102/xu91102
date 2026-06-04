@@ -1,0 +1,71 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#061826"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#7EE787"/>
+      <stop offset="0.45" stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#8957E5"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.34 0 0 0 0 0.65 0 0 0 0 1 0 0 0 0.55 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <style>
+      .label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .scene { animation: drift 7s ease-in-out infinite; transform-origin: 640px 360px; }
+      .bar { animation: rise 3.4s ease-in-out infinite; transform-origin: bottom center; }
+      .bar:nth-child(3n) { animation-delay: .25s; }
+      .bar:nth-child(4n) { animation-delay: .55s; }
+      .bar:nth-child(5n) { animation-delay: .85s; }
+      .path { stroke-dasharray: 12 18; animation: dash 18s linear infinite; }
+      @keyframes drift {
+        0%,100% { transform: translateY(0) rotateX(0deg); }
+        50% { transform: translateY(-18px) rotateX(2deg); }
+      }
+      @keyframes rise {
+        0%,100% { transform: scaleY(.58); opacity: .62; }
+        50% { transform: scaleY(1); opacity: 1; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -520; }
+      }
+    </style>
+  </defs>
+  <rect width="1280" height="640" rx="24" fill="url(#sky)"/>
+  <text x="68" y="86" class="label" fill="#F0F6FC" font-size="34" font-weight="800">3D Contribution Preview</text>
+  <text x="68" y="124" class="label" fill="#8B949E" font-size="18">Run GitHub Actions to replace this preview with live contribution data.</text>
+
+  <g class="scene" filter="url(#glow)">
+    <path d="M245 434L640 246L1035 434L640 586L245 434Z" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
+    <path class="path" d="M245 434L640 246L1035 434L640 586L245 434Z" stroke="#58A6FF" stroke-width="3"/>
+    <g opacity=".7" stroke="#30363D">
+      <path d="M328 395L719 552"/>
+      <path d="M410 356L803 520"/>
+      <path d="M492 317L886 488"/>
+      <path d="M574 278L970 456"/>
+      <path d="M324 465L720 278"/>
+      <path d="M408 498L803 318"/>
+      <path d="M492 531L886 358"/>
+      <path d="M576 563L969 398"/>
+    </g>
+    <g>
+      <rect class="bar" x="343" y="336" width="28" height="118" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="392" y="318" width="28" height="148" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="441" y="371" width="28" height="84" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="490" y="292" width="28" height="176" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="539" y="345" width="28" height="122" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="588" y="268" width="28" height="214" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="637" y="312" width="28" height="166" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="686" y="342" width="28" height="132" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="735" y="292" width="28" height="195" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="784" y="352" width="28" height="117" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="833" y="320" width="28" height="153" rx="5" fill="url(#bar)"/>
+      <rect class="bar" x="882" y="370" width="28" height="94" rx="5" fill="url(#bar)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="0.46" stop-color="#111827"/>
+      <stop offset="1" stop-color="#062C43"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="175" y1="54" x2="1105" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#161B22"/>
+      <stop offset="1" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="cubeA" x1="658" y1="80" x2="896" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="cubeB" x1="788" y1="74" x2="928" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.34 0 0 0 0 0.65 0 0 0 0 1 0 0 0 0.42 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .float { animation: float 5s ease-in-out infinite; transform-origin: 820px 168px; }
+      .scan { animation: scan 4.2s linear infinite; }
+      .blink { animation: blink 1.1s steps(2, start) infinite; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      .grid rect { animation: lift 3.8s ease-in-out infinite; }
+      .grid rect:nth-child(2n) { animation-delay: .25s; }
+      .grid rect:nth-child(3n) { animation-delay: .55s; }
+      .grid rect:nth-child(5n) { animation-delay: .85s; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(-1deg); }
+        50% { transform: translateY(-14px) rotate(1.5deg); }
+      }
+      @keyframes scan {
+        0% { transform: translateX(-180px); opacity: 0; }
+        20%, 70% { opacity: .75; }
+        100% { transform: translateX(880px); opacity: 0; }
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes pulse {
+        0%, 100% { opacity: .45; }
+        50% { opacity: 1; }
+      }
+      @keyframes lift {
+        0%, 100% { transform: translateY(0); opacity: .45; }
+        50% { transform: translateY(-10px); opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+  <path d="M0 292C151 239 299 267 440 305C603 349 739 351 900 296C1031 251 1154 229 1280 267V360H0V292Z" fill="#0B1220" opacity=".8"/>
+  <g opacity=".38">
+    <path d="M118 74H1162" stroke="#30363D"/>
+    <path d="M118 126H1162" stroke="#30363D"/>
+    <path d="M118 178H1162" stroke="#30363D"/>
+    <path d="M118 230H1162" stroke="#30363D"/>
+    <path d="M118 282H1162" stroke="#30363D"/>
+  </g>
+
+  <rect x="174" y="54" width="932" height="252" rx="18" fill="url(#panel)" stroke="#30363D"/>
+  <rect x="174" y="54" width="932" height="38" rx="18" fill="#21262D"/>
+  <circle cx="200" cy="73" r="6" fill="#FF7B72"/>
+  <circle cx="222" cy="73" r="6" fill="#F2CC60"/>
+  <circle cx="244" cy="73" r="6" fill="#3FB950"/>
+  <text x="198" y="128" fill="#8B949E" class="mono" font-size="20">$ whoami</text>
+  <text x="198" y="166" fill="#F0F6FC" class="mono" font-size="34" font-weight="800">hhang / xu91102</text>
+  <text x="198" y="205" fill="#58A6FF" class="mono" font-size="22">AI workflow · harness · automation</text>
+  <text x="198" y="246" fill="#7EE787" class="mono" font-size="19">ship --from terminal --with feedback-loop</text>
+  <rect x="695" y="104" width="260" height="120" rx="16" fill="#0D1117" stroke="#30363D"/>
+  <rect class="scan" x="690" y="104" width="110" height="120" fill="#58A6FF" opacity=".13"/>
+
+  <g class="float" filter="url(#softGlow)">
+    <path d="M824 76L938 139L824 202L710 139L824 76Z" fill="url(#cubeB)" opacity=".92"/>
+    <path d="M710 139L824 202V290L710 225V139Z" fill="url(#cubeA)" opacity=".75"/>
+    <path d="M938 139L824 202V290L938 225V139Z" fill="#1F6FEB" opacity=".72"/>
+    <path d="M824 76V202M710 139L824 202L938 139M824 202V290" stroke="#F0F6FC" stroke-opacity=".5" stroke-width="2"/>
+  </g>
+
+  <g class="grid" transform="translate(765 206) skewY(-25) scale(1 .72)">
+    <rect x="0" y="0" width="18" height="18" rx="3" fill="#39D353"/>
+    <rect x="24" y="0" width="18" height="18" rx="3" fill="#26A641"/>
+    <rect x="48" y="0" width="18" height="18" rx="3" fill="#0E4429"/>
+    <rect x="72" y="0" width="18" height="18" rx="3" fill="#39D353"/>
+    <rect x="96" y="0" width="18" height="18" rx="3" fill="#161B22"/>
+    <rect x="0" y="24" width="18" height="18" rx="3" fill="#0E4429"/>
+    <rect x="24" y="24" width="18" height="18" rx="3" fill="#39D353"/>
+    <rect x="48" y="24" width="18" height="18" rx="3" fill="#26A641"/>
+    <rect x="72" y="24" width="18" height="18" rx="3" fill="#161B22"/>
+    <rect x="96" y="24" width="18" height="18" rx="3" fill="#39D353"/>
+    <rect x="0" y="48" width="18" height="18" rx="3" fill="#26A641"/>
+    <rect x="24" y="48" width="18" height="18" rx="3" fill="#161B22"/>
+    <rect x="48" y="48" width="18" height="18" rx="3" fill="#39D353"/>
+    <rect x="72" y="48" width="18" height="18" rx="3" fill="#0E4429"/>
+    <rect x="96" y="48" width="18" height="18" rx="3" fill="#26A641"/>
+  </g>
+
+  <rect x="198" y="264" width="12" height="22" fill="#F0F6FC" class="blink"/>
+  <circle cx="1038" cy="74" r="7" fill="#58A6FF" class="pulse"/>
+</svg>
