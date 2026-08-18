@@ -49,27 +49,3 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
     <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/xu91102/xu91102/output/github-contribution-grid-snake.svg" />
   </picture>
 </p>
-
-<p align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar" />
-</p>
-
-
-
-### Featured
-
-<p align="center">
-  <a href="https://github.com/xu91102/claude-everything-Workflow">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=xu91102&repo=claude-everything-Workflow&theme=github_dark&hide_border=true" alt="claude-everything-Workflow" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <a href="https://github.com/xu91102">GitHub</a>
-  ·
-  <a href="https://github.com/xu91102?tab=repositories">Repositories</a>
-  ·
-  <a href="https://github.com/xu91102?tab=stars">Stars</a>
-</p>
