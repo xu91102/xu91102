@@ -54,16 +54,7 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar" />
 </p>
 
-### Stats
 
-<p align="center">
-  <img height="168" src="https://github-readme-stats.vercel.app/api?username=xu91102&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github" alt="GitHub stats" />
-  <img height="168" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xu91102&layout=compact&hide_border=true&theme=github_dark" alt="Top languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=xu91102&theme=github-compact&hide_border=true&area=true" width="100%" alt="GitHub activity graph" />
-</p>
 
 ### Featured
 
