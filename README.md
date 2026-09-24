@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/terminal-hero.svg" width="100%" alt="hhang profile hero" />
-</p>
-
 <h1 align="center">Hi, I'm hhang</h1>
 
 <p align="center">
