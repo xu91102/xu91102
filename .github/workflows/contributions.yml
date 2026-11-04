@@ -1,0 +1,63 @@
+name: Update Profile Contributions
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - scripts/**
+      - tests/**
+      - .github/workflows/contributions.yml
+  pull_request:
+    paths:
+      - scripts/**
+      - tests/**
+      - .github/workflows/contributions.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-contributions-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 -m unittest discover -s tests -v
+
+  update:
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Refresh merged contributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python3 scripts/update_contributions.py --user "$PROFILE_USER"
+      - name: Publish changes when needed
+        run: |
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "The contribution list is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs(profile): refresh merged contributions"
+          git pull --rebase origin main
+          git push origin HEAD:main
