@@ -27,13 +27,13 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
 ### Contributing to
 
 <!-- CONTRIBUTIONS:START -->
-- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - SVG script analysis and .NET field constant inspection.
-- **[Glances](https://github.com/nicolargo/glances)** [![GitHub stars](https://img.shields.io/github/stars/nicolargo/glances?style=flat&color=gold)](https://github.com/nicolargo/glances) - CSV column alignment and JSON export flushing.
-- **[Docsify](https://github.com/docsifyjs/docsify)** [![GitHub stars](https://img.shields.io/github/stars/docsifyjs/docsify?style=flat&color=gold)](https://github.com/docsifyjs/docsify) - Search index persistence and per-link target handling.
-- **[Cheerio](https://github.com/cheeriojs/cheerio)** [![GitHub stars](https://img.shields.io/github/stars/cheeriojs/cheerio?style=flat&color=gold)](https://github.com/cheeriojs/cheerio) - Mixed-node `.data()` updates and non-element style access.
-- **[Lark CLI](https://github.com/larksuite/cli)** [![GitHub stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&color=gold)](https://github.com/larksuite/cli) - Approval-required meeting room guidance and cross-platform path validation.
-- **[Marked](https://github.com/markedjs/marked)** [![GitHub stars](https://img.shields.io/github/stars/markedjs/marked?style=flat&color=gold)](https://github.com/markedjs/marked) - Explicit empty-string CLI input handling.
-- **[Open Design](https://github.com/nexu-io/open-design)** [![GitHub stars](https://img.shields.io/github/stars/nexu-io/open-design?style=flat&color=gold)](https://github.com/nexu-io/open-design) - Stop retrying hard quota and usage-limit failures.
+- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - Guide retained cleanup before reopening targets; Report SVG script references and skipped bodies; Expose field constant defaults.
+- **[Glances](https://github.com/nicolargo/glances)** [![GitHub stars](https://img.shields.io/github/stars/nicolargo/glances?style=flat&color=gold)](https://github.com/nicolargo/glances) - Align samples with the initial column schema; Ignore non-object public IP responses; Preserve dotted list item identifiers.
+- **[Docsify](https://github.com/docsifyjs/docsify)** [![GitHub stars](https://img.shields.io/github/stars/docsifyjs/docsify?style=flat&color=gold)](https://github.com/docsifyjs/docsify) - Isolate per-link target overrides; Retain response status in cached results; Preserve HTML attributes.
+- **[Cheerio](https://github.com/cheeriojs/cheerio)** [![GitHub stars](https://img.shields.io/github/stars/cheeriojs/cheerio?style=flat&color=gold)](https://github.com/cheeriojs/cheerio) - Set data on mixed node selections; Guard style access on non-element nodes.
+- **[Lark CLI](https://github.com/larksuite/cli)** [![GitHub stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&color=gold)](https://github.com/larksuite/cli) - Guide approval room booking fallback; Reject Windows absolute paths cross-platform.
+- **[Marked](https://github.com/markedjs/marked)** [![GitHub stars](https://img.shields.io/github/stars/markedjs/marked?style=flat&color=gold)](https://github.com/markedjs/marked) - Honor an explicitly empty string input.
+- **[Open Design](https://github.com/nexu-io/open-design)** [![GitHub stars](https://img.shields.io/github/stars/nexu-io/open-design?style=flat&color=gold)](https://github.com/nexu-io/open-design) - Stop retrying hard quota failures.
 <!-- CONTRIBUTIONS:END -->
 
 ### Stack
