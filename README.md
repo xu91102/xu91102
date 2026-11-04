@@ -27,7 +27,7 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
 ### Contributing to
 
 <!-- CONTRIBUTIONS:START -->
-- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - Guide delimited analysis view exports; Guide retained cleanup before reopening targets; Report SVG script references and skipped bodies.
+- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - Retain one-shot Ghidra pseudocode results; Guide delimited analysis view exports; Guide retained cleanup before reopening targets.
 - **[Glances](https://github.com/nicolargo/glances)** [![GitHub stars](https://img.shields.io/github/stars/nicolargo/glances?style=flat&color=gold)](https://github.com/nicolargo/glances) - Align samples with the initial column schema; Ignore non-object public IP responses; Preserve dotted list item identifiers.
 - **[Docsify](https://github.com/docsifyjs/docsify)** [![GitHub stars](https://img.shields.io/github/stars/docsifyjs/docsify?style=flat&color=gold)](https://github.com/docsifyjs/docsify) - Isolate per-link target overrides; Retain response status in cached results; Preserve HTML attributes.
 - **[Cheerio](https://github.com/cheeriojs/cheerio)** [![GitHub stars](https://img.shields.io/github/stars/cheeriojs/cheerio?style=flat&color=gold)](https://github.com/cheeriojs/cheerio) - Set data on mixed node selections; Guard style access on non-element nodes.
