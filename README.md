@@ -34,6 +34,7 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
 - **[Lark CLI](https://github.com/larksuite/cli)** [![GitHub stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&color=gold)](https://github.com/larksuite/cli) - Guide approval room booking fallback; Reject Windows absolute paths cross-platform.
 - **[Marked](https://github.com/markedjs/marked)** [![GitHub stars](https://img.shields.io/github/stars/markedjs/marked?style=flat&color=gold)](https://github.com/markedjs/marked) - Honor an explicitly empty string input.
 - **[Open Design](https://github.com/nexu-io/open-design)** [![GitHub stars](https://img.shields.io/github/stars/nexu-io/open-design?style=flat&color=gold)](https://github.com/nexu-io/open-design) - Stop retrying hard quota failures.
+- **[fastmcp](https://github.com/PrefectHQ/fastmcp)** [![GitHub stars](https://img.shields.io/github/stars/PrefectHQ/fastmcp?style=flat&color=gold)](https://github.com/PrefectHQ/fastmcp) - Validate cursors when pagination is disabled.
 <!-- CONTRIBUTIONS:END -->
 
 ### Stack
