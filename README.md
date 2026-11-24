@@ -27,7 +27,7 @@ I build and refine personal AI coding workflows, reusable engineering harnesses,
 ### Contributing to
 
 <!-- CONTRIBUTIONS:START -->
-- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - Reuse normalized Base64 for retained response bodies; Cancel requests waiting for decoder admission; Retain Apple bundle executable provenance.
+- **[REA](https://github.com/morluto/rea)** [![GitHub stars](https://img.shields.io/github/stars/morluto/rea?style=flat&color=gold)](https://github.com/morluto/rea) - Page exact Playwright trace index hits directly; Reuse normalized Base64 for retained response bodies; Cancel requests waiting for decoder admission.
 - **[Glances](https://github.com/nicolargo/glances)** [![GitHub stars](https://img.shields.io/github/stars/nicolargo/glances?style=flat&color=gold)](https://github.com/nicolargo/glances) - Align samples with the initial column schema; Ignore non-object public IP responses; Preserve dotted list item identifiers.
 - **[Docsify](https://github.com/docsifyjs/docsify)** [![GitHub stars](https://img.shields.io/github/stars/docsifyjs/docsify?style=flat&color=gold)](https://github.com/docsifyjs/docsify) - Scope cached includes to their page context; Isolate per-link target overrides; Retain response status in cached results.
 - **[Cheerio](https://github.com/cheeriojs/cheerio)** [![GitHub stars](https://img.shields.io/github/stars/cheeriojs/cheerio?style=flat&color=gold)](https://github.com/cheeriojs/cheerio) - Set data on mixed node selections; Guard style access on non-element nodes.
