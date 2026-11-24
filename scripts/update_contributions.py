@@ -20,6 +20,33 @@ DISPLAY_NAMES = {
     "markedjs/marked": "Marked",
     "nexu-io/open-design": "Open Design",
 }
+PROJECT_SUMMARIES = {
+    "morluto/rea": (
+        "Improve analysis accuracy, CLI/MCP reliability, and Playwright trace and HAR processing performance."
+    ),
+    "nicolargo/glances": (
+        "Improve CSV, JSON, InfluxDB, and DuckDB exports; fix metric parsing and folder-list isolation."
+    ),
+    "docsifyjs/docsify": (
+        "Improve search indexing, embedded-content caching, and link and script handling."
+    ),
+    "cheeriojs/cheerio": (
+        "Fix data and style handling for mixed selections and non-element nodes."
+    ),
+    "larksuite/cli": (
+        "Improve approval-required meeting-room booking guidance and cross-platform file-path validation."
+    ),
+    "stablyai/orca": (
+        "Fix terminal-name synchronization across paired devices and preserve uploaded file paths when terminal panes close."
+    ),
+    "markedjs/marked": "Fix CLI handling of explicitly empty string input.",
+    "nexu-io/open-design": (
+        "Stop automatic retries when a provider's hard quota or usage limit is exhausted."
+    ),
+    "PrefectHQ/fastmcp": (
+        "Make MCP list endpoints reject invalid cursors even when pagination is disabled."
+    ),
+}
 QUERY = """
 query($login: String!, $cursor: String) {
   user(login: $login) {
@@ -104,9 +131,14 @@ def render_contributions(prs, user):
         name = DISPLAY_NAMES.get(full_name, merged_prs[0]["repository"]["name"])
         url = f"https://github.com/{full_name}"
         badge = f"https://img.shields.io/github/stars/{full_name}?style=flat&color=gold"
+        summary = (
+            plain_markdown(PROJECT_SUMMARIES[full_name])
+            if full_name in PROJECT_SUMMARIES
+            else contribution_summary(merged_prs)
+        )
         lines.append(
             f"- **[{plain_markdown(name)}]({url})** "
-            f"[![GitHub stars]({badge})]({url}) - {contribution_summary(merged_prs)}"
+            f"[![GitHub stars]({badge})]({url}) - {summary}"
         )
     return "\n".join(lines)
 

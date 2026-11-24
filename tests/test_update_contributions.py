@@ -61,7 +61,7 @@ class ProfileUpdateTests(unittest.TestCase):
         actual = self.readme.read_text(encoding="utf-8")
         self.assertIn("- **[REA](https://github.com/morluto/rea)**", actual)
         self.assertIn("img.shields.io/github/stars/morluto/rea?style=flat&color=gold", actual)
-        self.assertIn("Report SVG script references.", actual)
+        self.assertIn("Improve analysis accuracy, CLI/MCP reliability,", actual)
         for forbidden in ["other/pending", "team/private", "xu91102/own", "/pull/", "Old content"]:
             self.assertNotIn(forbidden, actual)
         self.assertTrue(actual.startswith(ORIGINAL.split(START)[0]))
@@ -93,9 +93,9 @@ class ProfileUpdateTests(unittest.TestCase):
         self.assertEqual(self.readme.read_text(encoding="utf-8"), invalid)
 
     def test_new_merges_refresh_descriptions_and_unchanged_data_does_not_rewrite(self):
-        old = pull_request("morluto/rea", "fix: Earlier merged fix")
+        old = pull_request("other/tool", "fix: Earlier merged fix")
         self.run_update([page([old])])
-        newer = pull_request("morluto/rea", "fix: New merged fix", "2026-11-04T12:00:00Z")
+        newer = pull_request("other/tool", "fix: New merged fix", "2026-11-04T12:00:00Z")
         self.run_update([page([old, newer])])
         actual = self.readme.read_text(encoding="utf-8")
         self.assertIn("New merged fix; Earlier merged fix.", actual)
@@ -103,9 +103,24 @@ class ProfileUpdateTests(unittest.TestCase):
         self.run_update([page([old, newer])])
         self.assertEqual(self.readme.stat().st_mtime_ns, modified)
 
+    def test_project_overviews_survive_automatic_refreshes_with_new_merges(self):
+        old = pull_request("morluto/rea", "fix(javascript): report SVG script references")
+        self.run_update([page([old])])
+        actual = self.readme.read_text(encoding="utf-8")
+        self.assertIn("Improve analysis accuracy, CLI/MCP reliability,", actual)
+        self.assertNotIn("Report SVG script references", actual)
+        modified = self.readme.stat().st_mtime_ns
+        newer = pull_request(
+            "morluto/rea", "perf(views): page exact Playwright trace index hits directly",
+            "2026-11-23T13:09:52Z",
+        )
+        self.run_update([page([old, newer])])
+        self.assertEqual(self.readme.read_text(encoding="utf-8"), actual)
+        self.assertEqual(self.readme.stat().st_mtime_ns, modified)
+
     def test_titles_cannot_insert_html_or_extra_markdown_links(self):
         self.run_update([page([pull_request(
-            "morluto/rea", "fix: <script>alert(1)</script> [click](javascript:alert(1))\nextra line"
+            "other/tool", "fix: <script>alert(1)</script> [click](javascript:alert(1))\nextra line"
         )])])
         actual = self.readme.read_text(encoding="utf-8")
         self.assertNotIn("<script>", actual)
